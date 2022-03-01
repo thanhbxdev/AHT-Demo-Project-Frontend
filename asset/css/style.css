@@ -1,0 +1,142 @@
+.header-top {
+  background-color: #000;
+  color: #525252;
+  padding: 12px 0;
+}
+
+.header-top-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 1.2;
+  align-items: center;
+}
+.header-top-inner .web-action {
+  display: flex;
+  align-items: center;
+}
+.header-top-inner .web-action i {
+  font-size: 14px;
+  line-height: 1.2;
+  vertical-align: 2px;
+}
+.header-top-inner .web-action-btn {
+  display: flex;
+  align-items: center;
+}
+.header-top-inner .web-action-btn:first-child {
+  margin-right: 30px;
+}
+.header-top-inner .web-action-btn .action-icon {
+  margin-right: 5px;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.header-bottom {
+  background-color: #ffffff;
+  padding: 18px 0;
+  align-items: center;
+}
+.header-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-bottom-inner .navbar-list {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Monserrat;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 0 42px;
+}
+.header-bottom-inner .navbar-list .navbar-item {
+  margin: 0 28px;
+}
+.header-bottom-inner .navbar-list .navbar-item:first-child {
+  margin-left: 0;
+  color: #8262b5 !important;
+}
+.header-bottom-inner .navbar-list .navbar-item:last-child {
+  margin-right: 0;
+}
+.header-bottom-inner .header-bottom-action {
+  display: flex;
+}
+.header-bottom-inner .header-bottom-action .header-bottom-btn {
+  margin-left: 30px;
+}
+.header-bottom-inner .header-bottom-action .header-bottom-btn i {
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #000;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+button {
+  border: 0;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.row {
+  margin: 0 -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@font-face {
+  font-family: Monserrat;
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Monserrat;
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=style.css.map */

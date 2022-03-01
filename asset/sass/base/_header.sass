@@ -1,0 +1,75 @@
+@import "../source/variable"
+//Header Top
+.header-top
+  background-color: $black
+  color: #525252
+  padding: 12px 0
+
+.header-top-inner
+  display: flex
+  justify-content: space-between
+  font-family: OpenSans
+  font-size: 14px
+  line-height: 1.2
+  align-items: center
+
+  .web-action
+    display: flex
+    align-items: center
+
+    i
+      font-size: 14px
+      line-height: 1.2
+      vertical-align: 2px
+
+    &-btn
+      &:first-child
+        margin-right: 30px
+      display: flex
+      align-items: center
+
+      .action-icon
+        margin-right: 5px
+        vertical-align: middle
+        font-size: 14px
+        line-height: 1.2
+//Header Bottom
+.header-bottom
+  background-color: $white
+  padding: 18px 0
+  align-items: center
+
+  &-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .navbar
+      &-list
+        display: flex
+        font-size: 14px
+        font-weight: 500
+        font-family: Monserrat
+        text-transform: uppercase
+        line-height: 1.2
+        padding: 0 42px
+
+        .navbar-item
+          margin: 0 28px
+
+          &:first-child
+            margin-left: 0
+            color: $main-color !important
+
+          &:last-child
+            margin-right: 0
+
+    .header-bottom-action
+      display: flex
+
+      .header-bottom-btn
+        margin-left: 30px
+
+        i
+          font-size: 26px
+          line-height: 1.2
