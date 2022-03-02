@@ -257,15 +257,14 @@
 
   .slider
     margin-top: 40px
+    background-image: url('../img/background.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100%
+    width: 100%
 
 
     .container-fluid
-      background-image: url('../../img/slider.png')
-      background-repeat: no-repeat
-      background-size: cover
-      height: 700px
-      width: 100%
-
 
     .main-slider
       .container
@@ -304,11 +303,17 @@
 
 
         .slider
-          background-image: url("../img/background.jpg")
-          background-size: cover
-          background-repeat: no-repeat
-          width: 100%
+          padding-bottom: 60px
           .list-item-slider
+            .slick-dots
+              bottom: -47px
+              button
+                &::before
+                  color: $main-color
+                  top: -1px
+                  left: -2px
+                  font-size: 11px
+                background-color: #b3a6c7
             .item
               .imgSl
                 height: 300px
@@ -341,6 +346,19 @@
                     color: #424242
                     font-weight: 400
                     font-family: OpenSans
+                    padding-bottom: 22px
+
+              .bottom
+                border-top: 1px solid $color-border
+                padding: 18px 0
+
+                .bottom-content
+                  display: flex
+                  margin-left: 20px
+                  color: $color-border
+
+                  .comment
+                    margin-right: 32px
 
 
     .slick-initialized .slick-slide
