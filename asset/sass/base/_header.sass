@@ -1,75 +1,107 @@
 @import "../source/variable"
-//Header Top
-.header-top
-  background-color: $black
-  color: #525252
-  padding: 12px 0
+.header
+  //Header Top
+  .header-top
+    background-color: $black
+    color: #525252
+    padding: 12px 0
 
-.header-top-inner
-  display: flex
-  justify-content: space-between
-  font-family: OpenSans
-  font-size: 14px
-  line-height: 1.2
-  align-items: center
-
-  .web-action
+  .header-top-inner
     display: flex
+    justify-content: space-between
+    font-family: OpenSans
+    font-size: 14px
+    line-height: 1.2
     align-items: center
-
-    i
-      font-size: 14px
-      line-height: 1.2
-      vertical-align: 2px
-
-    &-btn
-      &:first-child
-        margin-right: 30px
+    .web-info
+      i
+        padding-right: 6px
+      display: flex
+    .web-action
       display: flex
       align-items: center
 
-      .action-icon
-        margin-right: 5px
-        vertical-align: middle
+      i
         font-size: 14px
         line-height: 1.2
-//Header Bottom
-.header-bottom
-  background-color: $white
-  padding: 18px 0
-  align-items: center
+        vertical-align: 2px
 
-  &-inner
-    display: flex
-    align-items: center
-    justify-content: space-between
-
-    .navbar
-      &-list
+      &-btn
+        &:first-child
+          margin-right: 30px
         display: flex
-        font-size: 14px
-        font-weight: 500
-        font-family: Monserrat
-        text-transform: uppercase
-        line-height: 1.2
-        padding: 0 42px
+        align-items: center
 
-        .navbar-item
-          margin: 0 28px
-
-          &:first-child
-            margin-left: 0
-            color: $main-color !important
-
-          &:last-child
-            margin-right: 0
-
-    .header-bottom-action
-      display: flex
-
-      .header-bottom-btn
-        margin-left: 30px
-
-        i
-          font-size: 26px
+        .action-icon
+          margin-right: 5px
+          vertical-align: middle
+          font-size: 14px
           line-height: 1.2
+  //Header Bottom
+
+  .header-bottom
+    background-color: $white
+    padding: 18px 0
+    align-items: center
+    border-bottom: 1px solid $color-border
+
+    &-inner
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      .navbar-center
+        .navbar-inner
+          display: flex
+          justify-content: space-between
+
+          nav
+            .nav-icon
+              display: none
+
+            .navbar-list
+              display: flex
+              justify-content: space-between
+              align-items: center
+              font-size: 14px
+              font-weight: 500
+              font-family: Monserrat
+              text-transform: uppercase
+              line-height: 1.2
+              .close
+                display: none
+              .nav-title
+                display: none
+                background-color: $black
+                color: $white
+                line-height: 43px
+                text-transform: uppercase
+                font-size: 24px
+                font-weight: 600
+                padding: 0 15px
+              .navbar-item
+                margin-left: 27px
+                margin-right: 28px
+
+                &:first-child
+                  margin-left: 0
+
+                &:last-child
+                  margin-right: 89px
+
+
+      .header-bottom-action
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .nav-icon
+          display: none
+        .header-bottom-btn
+          margin-left: 30px
+
+          i
+            font-size: 26px
+            line-height: 1.2
+  //Logo Mobile
+  .logo-mobile
+    display: none

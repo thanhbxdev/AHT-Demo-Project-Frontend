@@ -1,19 +1,13 @@
 $(document).ready(function () {
-    $('.web-info-button').click(function (e) { 
+    $('.nav-icon').click(function (e) {
         e.preventDefault();
-        $(this).find('.info-content').toggle('show');
-        $(this).siblings().toggle('hide');
-        $('.sl-language').toggleClass('in-active');
+        $('.navbar-center').addClass('active');
+        $('.close').addClass('active');
     });
-    $('.nav-icon').click(function (e) { 
+    $('.close').click(function (e) {
         e.preventDefault();
-        $('.navbar').addClass('active');
-        $('.cover').addClass('active');
-    });
-    $('.cover').click(function (e) { 
-        e.preventDefault();
-        $('.navbar').removeClass('active');
-        $('.cover').removeClass('active');
+        $('.navbar-center').removeClass('active');
+        $('.close').removeClass('active');
     });
     var day = $('.days span').html();
     var hrs = $('.hours span').html();
