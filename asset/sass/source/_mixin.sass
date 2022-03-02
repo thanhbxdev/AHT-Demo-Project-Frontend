@@ -5,13 +5,6 @@
   -ms-transition: $attr, $sec
   -o-transition: $attr, $sec
 
-
-@mixin col($width)
-  width: $width
-  padding: 0 15px
-  margin: 15px 0
-  box-sizing: border-box
-
 @mixin transformer($scale)
   transform: $scale
   -webkit-transform: $scale
@@ -19,4 +12,9 @@
   -ms-transform: $scale
   -o-transform: $scale
 
+@mixin col($width)
+  width: $width
+  padding: 0 15px
+  margin: 15px 0
+  box-sizing: border-box
 

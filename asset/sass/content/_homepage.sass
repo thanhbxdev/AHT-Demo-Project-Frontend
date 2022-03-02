@@ -1,0 +1,420 @@
+@import "../source/mixin"
+.main-content
+  margin-top: 30px
+
+  .banner
+    .banner-col
+      margin: -15px 0
+
+    &-left
+      @include col(65.78%)
+      cursor: pointer
+
+      &-inner
+        img
+          @include transit(all, 0.5s)
+          display: block
+          width: 100%
+          height: 100%
+        overflow: hidden
+        height: 100%
+
+        &:hover
+          img
+            @include transformer(scale(1.1))
+
+
+        .banner-detail
+          position: relative
+
+          .banner-title
+            font-family: Pacifico
+            font-size: 30px
+            margin-bottom: 17px
+
+          .btn-banner
+            position: absolute
+            right: 0
+            color: $white
+            width: 108px
+            text-align: center
+            font-size: 14px
+            font-family: Monserrat
+            padding: 11px 0px
+            background-color: $main-color
+          position: absolute
+          bottom: 153px
+          right: 88px
+        position: relative
+        height: 100%
+
+
+    &-right
+      @include col(34.22%)
+      overflow: hidden
+
+      &-item
+        overflow: hidden
+        position: relative
+
+        &-inner
+          cursor: pointer
+
+          img
+            @include transit(all, 0.5s)
+            display: block
+            width: 100%
+
+          &:hover
+            img
+              @include transformer(scale(1.1))
+
+          .description
+            .title-top
+              text-transform: uppercase
+              font-family: Monserrat
+              font-weight: 500
+              font-size: 16px
+              line-height: 1.2
+              color: #616161
+
+            .title-bottom
+              text-transform: uppercase
+              font-family: Monserrat
+              font-weight: 500
+              font-size: 16px
+              line-height: 1.2
+            position: absolute
+            left: 56px
+            bottom: 76px
+
+          .description-bot
+            .title-top
+              text-transform: uppercase
+              font-family: Monserrat
+              font-weight: 500
+              font-size: 16px
+              line-height: 1.2
+              color: #616161
+
+            .title-bottom
+              text-transform: uppercase
+              font-family: Monserrat
+              font-weight: 500
+              font-size: 16px
+              line-height: 1.2
+              margin-bottom: 20px
+
+            .btn-banner
+              position: absolute
+              left: 0
+              color: $white
+              width: 108px
+              text-align: center
+              font-size: 14px
+              font-family: Monserrat
+              padding: 11px 0px
+              background-color: $main-color
+            position: absolute
+            left: 40px
+            bottom: 111px
+          overflow: hidden
+          position: relative
+          padding: 15px 0
+
+  .listing
+    .content1
+      &::after
+        content: ''
+        display: block
+        background-color: $main-color
+        width: 50px
+        height: 1px
+        margin-bottom: 50px
+
+      .title-top
+        font-size: 12px
+        letter-spacing: 6px
+        line-height: 1.2
+        color: $main-color
+        text-transform: uppercase
+        font-weight: 700
+        font-family: Monserrat
+
+
+      .title-bot
+        font-size: 24px
+        letter-spacing: 2px
+        color: #000000
+        text-transform: uppercase
+        font-weight: 700
+        font-family: Monserrat
+
+
+    .main-listing
+
+      display: flex
+      justify-content: center
+      align-content: center
+      min-height: 100vh
+
+      .list-item
+        position: relative
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(262px, 1fr))
+        grid-gap: 30px
+
+        .card
+          width: 100%
+          height: 430px
+
+          .imgSl
+            position: relative
+            width: 100%
+            height: 323px
+            overflow: hidden
+
+            img
+              position: absolute
+              top: 0
+              left: 0
+              width: 100%
+              height: 100%
+              object-fit: cover
+              transition: 0.5s ease-in-out
+
+
+            .add-cart
+              width: 118px
+              height: 40px
+              position: absolute
+              background-color: #fff
+              bottom: 10px
+              left: 10px
+              cursor: pointer
+              transition: 1s
+              transform: translateY(60px)
+              font-size: 12px
+              line-height: 40px
+              text-align: center
+              color: #424242
+              font-weight: 600
+              text-transform: uppercase
+              font-family: Monserrat
+
+              &:hover
+                color: #664c91
+                transition: 0s
+
+
+          &:hover
+            .imgSl
+              img
+                @include transformer(scale(1.1))
+
+
+              .add-cart
+                transform: translateY(0)
+
+
+          .content
+
+
+            .productName
+              h3
+                font-size: 14px
+                color: #000000
+                font-weight: 600
+                font-family: Monserrat
+
+
+            .price-rating
+              .rating
+                font-size: 14px
+                color: yellow
+
+
+              .price
+                margin-top: 20px
+                display: flex
+                letter-spacing: 0.01em
+
+                &-before
+                  color: #C2C2C2
+                  font-size: 14px
+                  font-weight: 400
+                  font-family: Monserrat
+
+
+                &-after
+                  margin-left: 5px
+                  color: #B4A1D3
+                  font-size: 14px
+                  font-weight: 600
+                  font-family: Monserrat
+
+
+  .slider
+    margin-top: 40px
+
+
+    .container-fluid
+      background-image: url('../../img/slider.png')
+      background-repeat: no-repeat
+      background-size: cover
+      height: 700px
+      width: 100%
+
+
+    .main-slider
+      .container
+
+
+        .content
+          padding-top: 80px
+          text-align: center
+
+
+          .firts-content
+            font-size: 13px
+            letter-spacing: 6px
+            color: #8262b5
+            font-weight: 500
+            font-family: Monserrat
+            text-transform: uppercase
+
+
+          .second-content
+            &::after
+              content: ''
+              background-color: $main-color
+              display: block
+              width: 50px
+              height: 1px
+              position: absolute
+              left: 48%
+            font-size: 24px
+            line-height: 40px
+            letter-spacing: 2px
+            color: #000000
+            font-weight: 500
+            font-family: Monserrat
+            text-transform: uppercase
+
+
+        .slider
+          background-image: url("../img/background.jpg")
+          background-size: cover
+          background-repeat: no-repeat
+          width: 100%
+          .list-item-slider
+            .item
+              .imgSl
+                height: 300px
+
+                img
+                  width: 100%
+                  height: 100%
+                  object-fit: cover
+
+
+              .content-slider
+                padding-top: 20px
+                background-color: #fff
+
+
+                .text
+                  margin-left: 20px
+
+                  .title
+
+                    color: #000000
+                    font-weight: 600
+                    font-family: Monserrat
+
+
+                  .content-center
+                    margin-top: 25px
+                    font-size: 14px
+                    line-height: 22px
+                    color: #424242
+                    font-weight: 400
+                    font-family: OpenSans
+
+
+    .slick-initialized .slick-slide
+      display: block
+      padding: 0 15px
+
+
+    .slick-arrow
+      position: absolute
+      top: 40%
+      transform: translateY(-50%)
+      border: none
+      width: 50px
+      height: 50px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 20px
+      line-height: 1
+      z-index: 5
+      transition: all 0.2s linear
+
+
+    .slick-next:before
+      color: #2cccff
+
+
+    .slick-prev:before
+      color: #2cccff
+
+
+    .slick-prev
+      left: 0
+
+
+    .slick-next
+      right: 0
+
+
+    .slick-dots
+      position: absolute
+      bottom: -30px
+      left: 50%
+      transform: translate(-50%, 0)
+      display: flex !important
+      align-items: center
+      justify-content: center
+      gap: 0 20px
+
+
+    .slick-dots button
+      font-size: 0
+      width: 15px
+      height: 15px
+      border-radius: 100rem
+      background-color: #eee
+      border: none
+      outline: none
+      transition: all 0.2s linear
+      color: red
+  
+
+
+  
+            
+          
+        
+      
+
+
+
+
+
+
+    
+  
+  

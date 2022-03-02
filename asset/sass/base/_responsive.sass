@@ -64,47 +64,47 @@
             .web-info-title
                 display: none
     .header-bottom
-    .container-fluid
-      .header-bottom-inner
-        .navbar-center
-          position: fixed
-          left: 0px
-          top: 0px
-          background-color: $white
-          z-index: 999
-          height: 100vh
-          width: 50vw
-          @include transit(all,.5s)
-          @include transformer(translateX(-110%))
-          .navbar-inner
-            display: block
-            nav
-              .navbar-list
-                -webkit-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
-                -moz-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
-                box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
-                display: block !important
-                .close
-                  display: block
-                  position: absolute
-                  top: 0
-                  right: 0
-                  color: $white
-                  font-size: 20px
-                .nav-title
-                  display: block
-                .navbar-item
-                  padding: 15px 15px
-                  margin: 0px
-                  border-bottom: 1px solid $color-border
-        .active
-          @include transformer(translateX(0))
-        .header-bottom-action
-          .nav-icon
-            display: inline
-            i
-              font-size: 26px
-              line-height: 1.2
+      .container-fluid
+        .header-bottom-inner
+          .navbar-center
+            position: fixed
+            left: 0px
+            top: 0px
+            background-color: $white
+            z-index: 999
+            height: 100vh
+            width: 50vw
+            @include transit(all,.5s)
+            @include transformer(translateX(-120%))
+            .navbar-inner
+              display: block
+              nav
+                .navbar-list
+                  -webkit-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
+                  -moz-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
+                  box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
+                  display: block !important
+                  .close
+                    display: block
+                    position: absolute
+                    top: 0
+                    right: 0
+                    color: $white
+                    font-size: 20px
+                  .nav-title
+                    display: block
+                  .navbar-item
+                    padding: 15px 15px
+                    margin: 0px
+                    border-bottom: 1px solid $color-border
+          .active
+            @include transformer(translateX(0))
+          .header-bottom-action
+            .nav-icon
+              display: inline
+              i
+                font-size: 26px
+                line-height: 1.2
 
 
 @media all and (max-width: 450px)

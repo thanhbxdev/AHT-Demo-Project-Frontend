@@ -9,27 +9,30 @@ $(document).ready(function () {
         $('.navbar-center').removeClass('active');
         $('.close').removeClass('active');
     });
-    var day = $('.days span').html();
-    var hrs = $('.hours span').html();
-    var mins = $('.mins span').html();
-    var secs = $('.secs span').html();
-    setInterval(function(){
-        secs--;
-        if (secs==-1) {
-            secs=59;
-            mins--;
-            if (mins==-1) {
-                mins=59;
-                hrs--;
-                if (hrs==-1) {
-                    hrs=23;
-                    day--;
-                }
-            }
-        }
-        $('.days span').html(day);
-        $('.hours span').html(hrs);
-        $('.mins span').html(mins);
-        $('.secs span').html(secs);
-    }, 1000);
+    $('.list-item-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        draggable: false,
+        prevArrow: `<button type='button' class='slick-prev slick-arrow'><ion-icon name="arrow-back-outline"></ion-icon></button>`,
+        nextArrow: `<button type='button' class='slick-next slick-arrow'><ion-icon name="arrow-forward-outline"></ion-icon></button>`,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    infinite: false,
+                },
+            },
+        ],
+    });
 });
