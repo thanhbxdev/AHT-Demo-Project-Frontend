@@ -154,6 +154,119 @@ button {
   flex-wrap: wrap;
 }
 
+.footer {
+  background-color: #222222;
+}
+.footer .copy-right {
+  border-top: 1px solid #393939;
+  font-size: 14px;
+  font-family: OpenSans;
+  color: #888888FF;
+  line-height: 1.8;
+}
+.footer .copy-right-inner {
+  padding: 29px 0 28px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .copy-right-inner .text-left i {
+  color: red;
+}
+.footer .copy-right-inner .text-left span {
+  color: white;
+}
+.footer .copy-right-inner icon-right {
+  margin-right: 5px;
+  font-size: 20px;
+  color: #888888;
+  line-height: 1.1;
+}
+.footer .about {
+  width: 33.33%;
+  padding: 0 15px;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+.footer .about-inner-title {
+  width: 75%;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: Monserrat;
+  color: #F7F7F7FF;
+  line-height: 1.35;
+  border-bottom: 1px solid #393939;
+  padding: 13px 0 31px 0;
+}
+.footer .about-inner-desc {
+  width: 75%;
+  text-align: left;
+  padding-top: 27px;
+  font-size: 14px;
+  font-family: OpenSans;
+  color: #888888FF;
+  line-height: 1.571;
+}
+.footer .about-inner-icon {
+  padding: 34px 0 48px 0;
+}
+.footer .about-inner-icon i {
+  color: #888888FF;
+  margin-right: 32px;
+}
+.footer .navigation {
+  width: 33.33%;
+  padding: 0 15px;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+.footer .navigation-inner-title {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: Monserrat;
+  color: #F7F7F7FF;
+  line-height: 1.35;
+  border-bottom: 1px solid #393939;
+  padding: 13px 0 31px 0;
+}
+.footer .navigation-inner-list {
+  display: flex;
+  padding-top: 27px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: OpenSans;
+  color: #888888FF;
+  line-height: 2;
+}
+.footer .navigation-inner-list .list-item {
+  flex: 1;
+}
+.footer .location {
+  width: 33.33%;
+  padding: 0 15px;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+.footer .location-inner-title {
+  font-size: 16px;
+  font-family: Monserrat;
+  color: #F7F7F7FF;
+  line-height: 1.35;
+  text-transform: capitalize;
+  border-bottom: 1px solid #393939;
+  padding: 13px 0 31px 0;
+}
+.footer .location-inner-list {
+  padding-top: 27px;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: OpenSans;
+  color: #888888FF;
+  line-height: 2;
+}
+.footer .location-inner-list i {
+  margin-right: 14px;
+}
+
 .main-content {
   margin-top: 30px;
 }
