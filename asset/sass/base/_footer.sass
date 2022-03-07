@@ -5,11 +5,14 @@
       padding: 29px 0 28px 0
       display: flex
       justify-content: space-between
+
       .text-left
         i
           color: red
+
         span
           color: white
+
       icon-right
         margin-right: 5px
         font-size: 20px
@@ -20,10 +23,11 @@
     font-family: OpenSans
     color: #888888FF
     line-height: 1.8
+  .fake
+    @include col(8.33%)
   .about
     &-inner
       &-title
-        width: 75%
         text-transform: capitalize
         font-size: 16px
         font-family: Monserrat
@@ -33,7 +37,6 @@
         padding: 13px 0 31px 0
 
       &-desc
-        width: 75%
         text-align: left
         padding-top: 27px
         font-size: 14px
@@ -47,7 +50,7 @@
         i
           color: #888888FF
           margin-right: 32px
-    @include col(33.33%)
+    @include col(25%)
 
   .navigation
     &-inner
@@ -71,7 +74,7 @@
 
         .list-item
           flex: 1
-    @include col(33.33%)
+    @include col(33.34%)
 
   .location
     &-inner
@@ -85,13 +88,21 @@
         padding: 13px 0 31px 0
 
       &-list
+        li
+          padding: 12px 0
+          .location-content
+            width: 200px
+            line-height: 28px
+            margin: -8px 0
+          display: flex
         padding-top: 27px
         text-transform: capitalize
         font-size: 14px
         font-family: OpenSans
         color: #888888FF
         line-height: 2.00
+
         i
           margin-right: 14px
-    @include col(33.33%)
+    @include col(25%)
   background-color: #222222

@@ -9,20 +9,15 @@
     &-left
       @include col(65.78%)
       cursor: pointer
+      margin: 0
 
       &-inner
         img
-          @include transit(all, 0.5s)
           display: block
           width: 100%
-          height: 100%
+        //height: 100%
         overflow: hidden
         height: 100%
-
-        &:hover
-          img
-            @include transformer(scale(1.1))
-
 
         .banner-detail
           position: relative
@@ -34,7 +29,8 @@
 
           .btn-banner
             position: absolute
-            right: 0
+            bottom: -27px
+            right: -1px
             color: $white
             width: 108px
             text-align: center
@@ -43,8 +39,8 @@
             padding: 11px 0px
             background-color: $main-color
           position: absolute
-          bottom: 153px
-          right: 88px
+          bottom: 173px
+          right: 85px
         position: relative
         height: 100%
 
@@ -52,6 +48,7 @@
     &-right
       @include col(34.22%)
       overflow: hidden
+      margin: 0
 
       &-item
         overflow: hidden
@@ -61,13 +58,10 @@
           cursor: pointer
 
           img
-            @include transit(all, 0.5s)
             display: block
             width: 100%
-
-          &:hover
-            img
-              @include transformer(scale(1.1))
+            max-height: 315px
+            object-fit: cover
 
           .description
             .title-top
@@ -77,16 +71,17 @@
               font-size: 16px
               line-height: 1.2
               color: #616161
+              letter-spacing: 3px
 
             .title-bottom
               text-transform: uppercase
               font-family: Monserrat
               font-weight: 500
-              font-size: 16px
+              font-size: 20px
               line-height: 1.2
             position: absolute
-            left: 56px
-            bottom: 76px
+            left: 66px
+            bottom: 95px
 
           .description-bot
             .title-top
@@ -96,18 +91,20 @@
               font-size: 16px
               line-height: 1.2
               color: #616161
+              letter-spacing: 3px
 
             .title-bottom
               text-transform: uppercase
               font-family: Monserrat
               font-weight: 500
-              font-size: 16px
+              font-size: 20px
               line-height: 1.2
               margin-bottom: 20px
 
             .btn-banner
               position: absolute
-              left: 0
+              top: 59px
+              left: 2px
               color: $white
               width: 108px
               text-align: center
@@ -116,14 +113,17 @@
               padding: 11px 0px
               background-color: $main-color
             position: absolute
-            left: 40px
-            bottom: 111px
+            left: 49px
+            bottom: 154px
           overflow: hidden
           position: relative
           padding: 15px 0
 
   .listing
     .content1
+      margin-top: 70px
+      margin-left: -1px
+
       &::after
         content: ''
         display: block
@@ -167,13 +167,11 @@
 
         .card
           width: 100%
-          height: 430px
 
           .imgSl
-            position: relative
             width: 100%
-            height: 323px
-            overflow: hidden
+            padding-top: calc(323 / 262 * 100%)
+            position: relative
 
             img
               position: absolute
@@ -182,16 +180,17 @@
               width: 100%
               height: 100%
               object-fit: cover
-              transition: 0.5s ease-in-out
 
 
             .add-cart
+              &:hover
+                color: $main-color
               width: 118px
               height: 40px
               position: absolute
               background-color: #fff
-              bottom: 10px
-              left: 10px
+              bottom: 65px
+              left: 5px
               cursor: pointer
               transition: 1s
               transform: translateY(60px)
@@ -202,25 +201,7 @@
               font-weight: 600
               text-transform: uppercase
               font-family: Monserrat
-
-              &:hover
-                color: #664c91
-                transition: 0s
-
-
-          &:hover
-            .imgSl
-              img
-                @include transformer(scale(1.1))
-
-
-              .add-cart
-                transform: translateY(0)
-
-
           .content
-
-
             .productName
               h3
                 font-size: 14px
@@ -232,11 +213,13 @@
             .price-rating
               .rating
                 font-size: 14px
-                color: yellow
+                color: $star-active
+                .rating-no-active
+                  color: $star-no-active
 
 
               .price
-                margin-top: 20px
+                margin-top: 4px
                 display: flex
                 letter-spacing: 0.01em
 
@@ -303,6 +286,9 @@
           padding-bottom: 60px
 
           .list-item-slider
+            .slick-list
+              margin: 0 -15px
+
             .slick-dots
               bottom: -47px
 
@@ -315,8 +301,33 @@
                 background-color: #b3a6c7
 
             .item
+              position: relative
+
+              .date
+                &-inner
+                  .date-number
+                  font-weight: bold
+                  color: $white
+                  display: flex
+                  flex-direction: column
+                  justify-content: center
+                  align-items: center
+                  width: 48px
+                  height: 48px
+                  border: 1px solid $white
+                  font-family: Monserrat
+                width: 60px
+                height: 60px
+                background-color: #a1d1dd
+                position: absolute
+                top: 22px
+                left: 35px
+                display: flex
+                justify-content: center
+                align-items: center
+
               .imgSl
-                height: 300px
+                height: 200px
 
                 img
                   width: 100%
@@ -391,10 +402,12 @@
 
 
     .slick-prev
+      display: none
       left: 0
 
 
     .slick-next
+      display: none
       right: 0
 
 
@@ -406,19 +419,31 @@
       display: flex !important
       align-items: center
       justify-content: center
-      gap: 0 20px
+    //gap: 0 20px
 
 
-    .slick-dots button
-      font-size: 0
-      width: 15px
-      height: 15px
-      border-radius: 100rem
-      background-color: #eee
-      border: none
-      outline: none
-      transition: all 0.2s linear
-      color: red
+    .slick-dots
+      .li
+        .slick-active
+        width: 10px !important
+        height: 10px !important
+        margin: 0px 6px !important
+
+      button
+        &::before
+          color: #8262b5 !important
+          top: -3px !important
+          left: -6px !important
+          font-size: 15px !important
+        font-size: 0
+        width: 10px
+        height: 10px
+        border-radius: 100rem
+        background-color: #eee !important
+        border: none
+        outline: none
+        transition: all 0.2s linear
+        color: red
   
 
 
