@@ -1,3 +1,4 @@
+@import "../source/mixin"
 @media all and (max-width: 1400px)
   .header-bottom
     .container-fluid
@@ -10,16 +11,19 @@
           z-index: 999
           height: 100vh
           width: 30vw
-          @include transit(all,.5s)
+          @include transit(all, .5s)
           @include transformer(translateX(110%))
+
           .navbar-inner
             display: block
+
             nav
               .navbar-list
-                -webkit-box-shadow: -5px 5px 10px -1px rgba(179,173,179,1)
-                -moz-box-shadow: -5px 5px 10px -1px rgba(179,173,179,1)
-                box-shadow: -5px 5px 10px -1px rgba(179,173,179,1)
+                -webkit-box-shadow: -5px 5px 10px -1px rgba(179, 173, 179, 1)
+                -moz-box-shadow: -5px 5px 10px -1px rgba(179, 173, 179, 1)
+                box-shadow: -5px 5px 10px -1px rgba(179, 173, 179, 1)
                 display: block !important
+
                 .close
                   display: block
                   position: absolute
@@ -27,23 +31,96 @@
                   right: 0
                   color: $white
                   font-size: 20px
+
                 .nav-title
                   display: block
+
                 .navbar-item
                   padding: 15px 15px
                   margin: 0px
                   border-bottom: 1px solid $color-border
+
         .active
           @include transformer(translateX(0))
+
         .header-bottom-action
           .nav-icon
             display: inline
+
             i
               font-size: 26px
               line-height: 1.2
+
+@media all and (max-width: 1200px)
+
+  .main-content
+    .banner
+      .banner-left
+        width: 100%
+        img
+          width: 100%
+
+
+      .banner-right
+        width: 100%
+
+
+        .banner-col
+          display: flex
+          margin: 0 -15px
+
+          .banner-child
+            width: 50%
+            padding: 0 15px
+
+            .banner-child-inner
+
+              height: 100%
+
+              img
+                width: 100%
+
+
+            .inner-2
+              position: relative
+              overflow: hidden
+
+              .img-2
+                position: absolute
+                top: 0
+                left: 0
+
+
 @media all and (max-width: 1150px)
   .container-fluid
     padding: 0 15px
+  .footer
+    .about
+      .about-inner-title
+        padding-top: 0
+      .about-inner-icon
+        padding-bottom: 0
+      text-align: center
+      @include col(100%)
+    .navigation
+      .navigation-inner-title
+        padding-top: 0
+      text-align: center
+      @include col(100%)
+    .location
+      .location-inner-title
+        padding-top: 0
+      .location-inner-list
+        display: flex
+        justify-content: center
+        text-align: left
+      text-align: center
+      @include col(100%)
+    .copy-right
+      .copy-right-inner
+        flex-direction: column-reverse
+        justify-content: center
+      text-align: center
 @media all and (max-width: 1024px)
 
 @media all and (max-width: 768px)
@@ -55,50 +132,52 @@
             .web-action-btn
               .action-title
                 display: none
-  .banner
-    &-left
-      &-inner
-        .banner-detail
-          .banner-title
-            font-size: 20px !important
-            margin-bottom: 10px !important
-          .btn-banner
-            width: 86px !important
-            font-size: 12px !important
-            padding: 11px 0 !important
-          bottom: 90px !important
-          right: 30px !important
-    &-right
-      &-item
-        &-inner
-          .description
-            .title-top
-              font-size: 13px !important
-            .title-bottom
-              font-size: 13px !important
-            left: 31px !important
-            bottom: 50px !important
-          .description-bot
-            .btn-banner
-              width: 86px !important
-              font-size: 12px !important
-              padding: 11px 0 !important
-            .title-top
-              font-size: 13px !important
-            .title-bottom
-              font-size: 13px !important
-            left: 31px !important
-            bottom: 90px !important
-  .footer
-    .row
-      display: none
-    .copy-right
-      &-inner
-        .icon-right
-          display: none
-        justify-content: center
+  .main-content
+    .banner
+      .banner-right
+        width: 100%
+        box-sizing: border-box
+
+        .banner-col
+          width: 100%
+          display: block
 
 
+          .banner-child
+            width: 100%
+
+            .banner-right-content-content-top
+              left: 10%
+
+              .title-top
+                font-size: 25px
+
+
+              .title-bot
+                font-size: 25px
+
+
+            .banner-right-content-content-bot
+              left: 10%
+              @include transformer(translateY(-35%))
+              margin-left: 27px
+
+              .title-top
+                font-size: 25px
+
+
+              .title-bot
+                font-size: 25px
+                padding: 15px 0
+
+
+            .inner-2
+              position: unset
+
+
+              .img-2
+                position: unset
+                padding: 15px 0
 
 
 
@@ -109,7 +188,8 @@
         .header-top-inner
           .web-info
             .web-info-title
-                display: none
+              display: none
+
     .header-bottom
       .container-fluid
         .header-bottom-inner
@@ -121,16 +201,19 @@
             z-index: 999
             height: 100vh
             width: 50vw
-            @include transit(all,.5s)
+            @include transit(all, .5s)
             @include transformer(translateX(-120%))
+
             .navbar-inner
               display: block
+
               nav
                 .navbar-list
-                  -webkit-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
-                  -moz-box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
-                  box-shadow: 5px 5px 10px 1px rgba(179,173,179,1)
+                  -webkit-box-shadow: 5px 5px 10px 1px rgba(179, 173, 179, 1)
+                  -moz-box-shadow: 5px 5px 10px 1px rgba(179, 173, 179, 1)
+                  box-shadow: 5px 5px 10px 1px rgba(179, 173, 179, 1)
                   display: block !important
+
                   .close
                     display: block
                     position: absolute
@@ -138,47 +221,57 @@
                     right: 0
                     color: $white
                     font-size: 20px
+
                   .nav-title
                     display: block
+
                   .navbar-item
                     padding: 15px 15px
                     margin: 0px
                     border-bottom: 1px solid $color-border
+
           .active
             @include transformer(translateX(0))
+
           .header-bottom-action
             .nav-icon
               display: inline
+
               i
                 font-size: 26px
                 line-height: 1.2
   .banner
     &-left
       width: 100% !important
-    &-right
-      .banner-col
-        .banner-right-item
-          &-inner
-            img
-              width: 100%
-              height: 300px
-              object-fit: cover
-            .description
-              left: 59px !important
-              bottom: 107px !important
-              .title-top
-                font-size: 20px !important
-              .title-bottom
-                font-size: 20px !important
-            .description-bot
-              left: 62px !important
-              bottom: 146px !important
-              .title-top
-                font-size: 20px !important
-              .title-bottom
-                font-size: 20px !important
-      width: 100% !important
 
+    &-right
+      .banner-right-item
+        &-inner
+          img
+            width: 100%
+            height: 300px
+            object-fit: cover
+
+          .description
+            left: 59px !important
+            bottom: 107px !important
+
+            .title-top
+              font-size: 20px !important
+
+            .title-bottom
+              font-size: 20px !important
+
+          .description-bot
+            left: 62px !important
+            bottom: 146px !important
+
+            .title-top
+              font-size: 20px !important
+
+            .title-bottom
+              font-size: 20px !important
+      width: 100% !important
 
 
 @media all and (max-width: 450px)
@@ -187,22 +280,24 @@
       display: block
       padding: 12px 0
       border-bottom: 1px solid $color-border
+
       .container-fluid
         img
           margin: 0 auto
           display: block
+
     .header-bottom
       padding: 12px 0
+
       .container-fluid
         .header-bottom-inner
           justify-content: flex-end
+
           .logo
             display: none
+
         .header-bottom-action
           .nav-icon
             margin-left: 30px
             position: absolute
             left: 0px
-  .footer
-    .text-left
-      font-size: 12px

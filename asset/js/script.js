@@ -1,4 +1,28 @@
 $(document).ready(function () {
+    $('.list-item-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 725,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true,
+                    infinite: true,
+                },
+            },
+        ],
+    });
     $('.nav-icon').click(function (e) {
         e.preventDefault();
         $('.navbar-center').addClass('active');
